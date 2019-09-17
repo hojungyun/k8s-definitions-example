@@ -7,5 +7,5 @@
 
 
 # Reference
-https://github.com/mmumshad/kubernetes-example-voting-app.git
-https://github.com/mmumshad/example-voting-app-kubernetes-v2.git
+https://github.com/mmumshad/kubernetes-example-voting-app.git  
+https://github.com/mmumshad/example-voting-app-kubernetes-v2.git  
