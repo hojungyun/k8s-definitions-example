@@ -35,16 +35,18 @@ kubectl get nodes
 ### Test
 
 ***Node1***
-- http://10.0.0.1/30008
-- http://10.0.0.1/30009
+- http://192.168.1.231/30008
+- http://192.168.1.231/30009
 
 ***Node2***
-http://10.0.0.2/30008
-http://10.0.0.2/30009
+- http://192.168.1.232/30008
+- http://192.168.1.231/30009
 
 
-### 2. Deployment + Service (NodePort, ClusterIP)
-### 3. Deployment + Service (LoadBalance, ClusterIP)
+### 2. Deployment + Service (NodePort, ClusterIP) - GCP
+
+
+### 3. Deployment + Service (LoadBalance, ClusterIP) - GCP
 
 
 # Reference
