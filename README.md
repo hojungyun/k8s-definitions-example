@@ -10,7 +10,7 @@
 - Definition for Service (ClusterIP for redis, db, worker)
 - Definition for Service (NodePort for voting app, result app)
 
-### 3. Deployment + Service (LoadBalance, ClusterIP)
+### 3. Deployment + Service (LoadBalancer, ClusterIP)
 - Definition for `Deployment`
 - Definition for Service (ClusterIP for redis, db, worker)
 - Definition for Service (`LoadBalancer` for voting app, result app)
