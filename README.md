@@ -1,16 +1,16 @@
 # YAML for K8s definitions
 
-### Pod + Service (NodePort, ClusterIP)
+### 1. Pod + Service (NodePort, ClusterIP)
 - Definition for `Pod`
 - Definition for Service (ClusterIP for redis, db, worker)
 - Definition for Service (`NodePort` for voting app, result app)
 
-### Deployment + Service (NodePort, ClusterIP)
+### 2. Deployment + Service (NodePort, ClusterIP)
 - Definition for `Deployment`
 - Definition for Service (ClusterIP for redis, db, worker)
 - Definition for Service (NodePort for voting app, result app)
 
-### Deployment + Service (LoadBalance, ClusterIP)
+### 3. Deployment + Service (LoadBalance, ClusterIP)
 - Definition for `Deployment`
 - Definition for Service (ClusterIP for redis, db, worker)
 - Definition for Service (`LoadBalancer` for voting app, result app)
@@ -18,7 +18,7 @@
 
 # Commands
 
-### Pod + Service (NodePort, ClusterIP)
+### 1. Pod + Service (NodePort, ClusterIP)
 ```
 git clone https://github.com/hojungyun/k8s-definitions-example.git
 cd 1.voting_app_with_pod_and_service_nodeport
@@ -32,8 +32,8 @@ kubectl get all
 kubectl get nodes
 ```
 
-### Deployment + Service (NodePort, ClusterIP)
-### Deployment + Service (LoadBalance, ClusterIP)
+### 2. Deployment + Service (NodePort, ClusterIP)
+### 3. Deployment + Service (LoadBalance, ClusterIP)
 
 
 # Reference
