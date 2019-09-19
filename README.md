@@ -18,6 +18,11 @@
 
 # Commands
 
+### Check cluster
+```
+kubectl cluster-info 
+```
+
 ### 1. Pod + Service (NodePort, ClusterIP)
 ```
 git clone https://github.com/hojungyun/k8s-definitions-example.git
@@ -44,6 +49,20 @@ kubectl get nodes
 
 
 ### 2. Deployment + Service (NodePort, ClusterIP) - GCP
+```
+git clone https://github.com/hojungyun/k8s-definitions-example.git
+cd 2.voting_app_with_deployment_and_service_nodeport
+
+kubectl create -f .
+
+kubectl get pods
+kubectl get pods -o wide
+kubectl get services
+kubectl get all
+kubectl get nodes
+```
+
+
 
 
 ### 3. Deployment + Service (LoadBalance, ClusterIP) - GCP
