@@ -183,6 +183,8 @@ kubectl get pods -o wide
 kubectl get deployments
 kubectl get services
 kubectl get all
+
+kubectl delete -f .
 ```
 
 ***Example:***
@@ -267,6 +269,20 @@ replicaset.apps/worker-app-deployment-84f794bf6    2         2         2       3
 ```
 
 ### 3. Deployment + Service (LoadBalance, ClusterIP) - GCP
+```
+git clone https://github.com/hojungyun/k8s-definitions-example.git
+cd k8s-definitions-example/2.voting_app_with_deployment_and_service_nodeport
+
+kubectl create -f .
+
+kubectl get pods
+kubectl get pods -o wide
+kubectl get deployments
+kubectl get services
+kubectl get all
+
+kubectl delete -f .
+```
 
 
 # Reference
