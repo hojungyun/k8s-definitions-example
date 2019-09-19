@@ -271,7 +271,7 @@ replicaset.apps/worker-app-deployment-84f794bf6    2         2         2       3
 ### 3. Deployment + Service (LoadBalance, ClusterIP) - GCP
 ```
 git clone https://github.com/hojungyun/k8s-definitions-example.git
-cd k8s-definitions-example/2.voting_app_with_deployment_and_service_nodeport
+cd k8s-definitions-example/3.voting_app_with_deployment_and_service_loadbalance/
 
 kubectl create -f .
 
@@ -284,6 +284,45 @@ kubectl get all
 kubectl delete -f .
 ```
 
+***Example:***
+```
+$ kubectl get all
+NAME                                         READY   STATUS    RESTARTS   AGE
+pod/postgres-deployment-7cb459fdcc-t88vx     1/1     Running   0          2m19s
+pod/redis-deployment-8b6d86ddc-jvjqs         1/1     Running   0          2m18s
+pod/result-app-deployment-5d74dcfc5f-bvxfr   1/1     Running   0          2m18s
+pod/voting-app-deployment-584d87d974-4kptr   1/1     Running   0          2m17s
+pod/voting-app-deployment-584d87d974-jqscp   1/1     Running   0          2m17s
+pod/worker-app-deployment-84f794bf6-mfmk7    1/1     Running   0          2m17s
+pod/worker-app-deployment-84f794bf6-nfwfc    1/1     Running   0          2m17s
+
+NAME                     TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)        AGE
+service/db               ClusterIP      10.12.10.6    <none>           5432/TCP       2m19s
+service/kubernetes       ClusterIP      10.12.0.1     <none>           443/TCP        75m
+service/redis            ClusterIP      10.12.4.63    <none>           6379/TCP       2m19s
+service/result-service   LoadBalancer   10.12.6.102   35.202.105.132   80:30038/TCP   2m19s
+service/voting-service   LoadBalancer   10.12.1.120   35.232.145.109   80:31832/TCP   2m18s
+
+NAME                                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/postgres-deployment     1/1     1            1           2m20s
+deployment.apps/redis-deployment        1/1     1            1           2m19s
+deployment.apps/result-app-deployment   1/1     1            1           2m19s
+deployment.apps/voting-app-deployment   2/2     2            2           2m18s
+deployment.apps/worker-app-deployment   2/2     2            2           2m18s
+
+NAME                                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/postgres-deployment-7cb459fdcc     1         1         1       2m20s
+replicaset.apps/redis-deployment-8b6d86ddc         1         1         1       2m19s
+replicaset.apps/result-app-deployment-5d74dcfc5f   1         1         1       2m19s
+replicaset.apps/voting-app-deployment-584d87d974   2         2         2       2m18s
+replicaset.apps/worker-app-deployment-84f794bf6    2         2         2       2m18s
+```
+
+***From Mac:***
+- http://35.202.105.132
+![voting](/img/voting.png)
+- http://35.232.145.109
+![result](/img/result.png)
 
 # Reference
 https://github.com/mmumshad/kubernetes-example-voting-app.git  
