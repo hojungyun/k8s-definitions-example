@@ -26,7 +26,7 @@ kubectl cluster-info
 ### 1. Pod + Service (NodePort, ClusterIP)
 ```
 git clone https://github.com/hojungyun/k8s-definitions-example.git
-cd 1.voting_app_with_pod_and_service_nodeport
+cd k8s-definitions-example/1.voting_app_with_pod_and_service_nodeport
 
 kubectl create -f .
 
@@ -51,7 +51,7 @@ kubectl get nodes
 ### 2. Deployment + Service (NodePort, ClusterIP) - GCP
 ```
 git clone https://github.com/hojungyun/k8s-definitions-example.git
-cd 2.voting_app_with_deployment_and_service_nodeport
+cd k8s-definitions-example/2.voting_app_with_deployment_and_service_nodeport
 
 kubectl create -f .
 
