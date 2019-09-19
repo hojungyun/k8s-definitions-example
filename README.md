@@ -320,10 +320,10 @@ replicaset.apps/worker-app-deployment-84f794bf6    2         2         2       2
 
 ***From Mac:***
 
-[voting](http://35.202.105.132)
+#### [voting](http://35.202.105.132)
 ![voting](/img/voting.png)
 
-[voting](http://35.232.145.109)
+#### [voting](http://35.232.145.109)
 ![result](/img/result.png)
 
 # Reference
