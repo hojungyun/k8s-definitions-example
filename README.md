@@ -16,7 +16,7 @@
 - Definition for Service (`LoadBalancer` for voting app, result app)
 - Only for Cloud
 
-# Commands
+# Usage
 
 ### Check cluster
 ```
